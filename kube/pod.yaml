@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: apipy-hello
+spec:
+  containers:
+  - name: apipy-hello-container
+    image: rcelebrone/apipy-hello:1.5

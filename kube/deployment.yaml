@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: apipy-hello
+spec:
+  replicas: 5 #instancias de container
+  selector:
+    matchLabels:
+      app: apipy-hello
+  template:
+    metadata:
+      labels:
+        app: apipy-hello
+    spec:
+      containers:
+        - name: apipy-hello-container
+          image: rcelebrone/apipy-hello:1.5
